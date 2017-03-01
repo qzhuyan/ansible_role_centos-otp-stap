@@ -1,0 +1,8 @@
+---
+# tasks file for ansible-role-centos-otp-stap
+
+# Step 1) build systemtap for OS
+- include: "kernel-stap.yml"
+
+# Step 2) build otp with utrace enabled
+- include: "otp-stap.yml"

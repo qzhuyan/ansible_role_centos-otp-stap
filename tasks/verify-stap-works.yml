@@ -1,0 +1,3 @@
+- name: verify stap works
+  sudo: yes
+  command: stap -v -e 'probe vfs.read {printf("read performed\n"); exit()}'

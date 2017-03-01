@@ -1,0 +1,3 @@
+- name: install new systemtap
+  sudo: yes
+  script: build_systemtap.sh

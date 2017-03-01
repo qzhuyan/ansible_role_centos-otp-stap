@@ -1,0 +1,3 @@
+- name: add cloud-user to group
+  sudo: yes
+  user: name=cloud-user append=yes groups=stapdev

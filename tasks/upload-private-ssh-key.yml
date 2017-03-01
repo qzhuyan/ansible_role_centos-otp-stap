@@ -1,0 +1,12 @@
+- name: read content of key
+  sudo: no
+  when: private_ssh_key is defined
+  local_action: shell cat {{ private_ssh_key }}
+  register: data
+
+- name: upload ssh key for pulling git repos
+  when: private_ssh_key is defined
+  lineinfile: dest={{ ansible_env.HOME }}/.ssh/id_dsa line={{ data.stdout }} mode=700 create=yes owner={{ ansible_env.USER }}
+
+- name: ssh no hostkey checking
+  lineinfile: dest=.ssh/config line="StrictHostKeyChecking no" mode=700 create=yes owner={{ ansible_env.USER }}

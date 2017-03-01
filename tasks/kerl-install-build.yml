@@ -1,0 +1,3 @@
+- name: kerl install
+  sudo: no
+  command:  kerl install {{ otp_build }} ~/OTP/{{ otp_build }}

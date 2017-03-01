@@ -1,0 +1,8 @@
+---
+# build otp with kerl
+- include: "erl-dev-libs.yml"
+- include: "install-new-system-tap.yml"
+- include: "install_kerl.yml"
+- include:  "upload-private-ssh-key.yml"
+- include: "kerl-build-otp.yml"
+- include: "kerl-install-build.yml"

@@ -1,0 +1,6 @@
+- name: download kerl
+  sudo: yes
+  get_url: url=http://raw.githubusercontent.com/kerl/kerl/master/kerl dest=/usr/bin/kerl owner=root mode=a+x
+
+- name: update kerl
+  command: kerl update releases

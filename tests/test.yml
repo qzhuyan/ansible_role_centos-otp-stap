@@ -1,0 +1,9 @@
+---
+# test with
+# ansible-playbook -i ansible-role-centos-otp-stap/tests/inventory ansible-role-centos-otp-stap/tests/test.yml  --syntax-check
+- hosts: localhost
+  roles:
+    - ansible-role-centos-otp-stap
+  vars:
+    otp_rel: 17
+    otp_build: otp_17

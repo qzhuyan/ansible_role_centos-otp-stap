@@ -1,0 +1,3 @@
+- name: install yum packages
+  sudo: true
+  yum: name={{ yum_packages  }}  state=latest enablerepo={{ extra_repo }}

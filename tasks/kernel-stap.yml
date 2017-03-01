@@ -1,0 +1,7 @@
+---
+# tasks file for install systemtap for OS
+- include: "yum-packages.yml"
+- include: "stapdev_group.yml"
+- include: "yum-package-group.yml"
+- include: "restart_and_wait.yml"
+- include: "verify-stap-works.yml"

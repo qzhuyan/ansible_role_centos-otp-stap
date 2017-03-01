@@ -1,0 +1,10 @@
+---
+# defaults file for ansible-role-centos-otp-stap
+kernel_version: 3.10.0-514.6.1.el7
+extra_repo: "base-debuginfo"
+yum_packages: kernel-{{ kernel_version }},kernel-devel-{{ kernel_version }},kernel-debuginfo-{{ kernel_version }},systemtap,systemtap-runtime
+
+private_ssh_key: "/home/ezhuwya/.ssh/id_dsa"
+
+otp_rel: "17.4"
+otp_build: otp_17.4
